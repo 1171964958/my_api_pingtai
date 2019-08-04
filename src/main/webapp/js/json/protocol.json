@@ -1,0 +1,37 @@
+{
+	"HTTP":{
+	    "Headers":{
+	    },
+	    "Querys":{
+	    },
+	    "Authorization":{
+	    },
+	    "Method":"POST",
+	    "ConnectTimeOut":"",
+	    "ReadTimeOut":"",
+	    "RecEncType":"UTF-8",
+	    "EncType":"UTF-8" 
+	},
+	"HTTPS":{
+		"Headers":{
+	    },
+	    "Authorization":{
+	    },
+	    "Method":"POST",
+	    "ConnectTimeOut":"",
+	    "ReadTimeOut":"",
+	    "RecEncType":"UTF-8",
+	    "EncType":"UTF-8"
+	},
+	"Socket":{
+		"ConnectTimeOut":"",
+	    "ReadTimeOut":"" 
+	},
+	"WebService":{
+	    "ConnectTimeOut":"",
+	    "Namespace":"",
+	    "Method":"",
+	    "Username":"",
+	    "Password":""
+	}
+}

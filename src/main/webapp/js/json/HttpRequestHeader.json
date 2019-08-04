@@ -1,0 +1,96 @@
+{
+	"returnCode": 0,
+	"error": "",
+	"rootPid": 1,
+	"data": [{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "请求头",
+		"parameterId": 1,
+		"parameterIdentify": "RequestHeader",
+		"parameterName": "",
+		"parentId": 0,
+		"path": "TopRoot",
+		"type": "Map"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "请求头，标名请求主机器名，可为IP也可为域名，http1.1后强制使用，用此请求信息，可在服务端做WEB虚拟机，实现一机多WEB服务",
+		"parameterId": 2,
+		"parameterIdentify": "Host",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.RequestHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "请求、响应体的数据字节大小",
+		"parameterId": 3,
+		"parameterIdentify": "Content-Length",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.RequestHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "请求头，可接受的文本压缩算法，如： gzip, deflate",
+		"parameterId": 4,
+		"parameterIdentify": "Accept-Encoding",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.RequestHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "请求头，支持语言，客户端浏览器的设置，如：zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3",
+		"parameterId": 5,
+		"parameterIdentify": "Accept-Language",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.RequestHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "请求头，浏览器信息，如：Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:12.0) Gecko/20100101 Firefox/12.0，细心会注册到IE也会用Mozilla，这是一个历史问题，早期WEB服务器貌似有问题，只支持Mozilla，微软IE做为 后起之秀只能伪装成Mozilla",
+		"parameterId": 6,
+		"parameterIdentify": "User-Agent",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.RequestHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "请求头，服务器或客户端在上次设置的COOKIE，包括作用域名(.360buy.com)，过 期时间，键与值。大部分WEB服务器都会在第一次访问时在响应头上加Set-Cookie， (指某些网站为了辨别用户身份、进行session跟踪而储存在用户本地终端上的数据（通常经过加密）)如：BAIDUID=49415814CDBBB4CE65EC50EE4BB65E9A:FG=1; expires=Wed, 07-Nov-42 07:03:34 GMT; path=/; domain=.baidu.com",
+		"parameterId": 7,
+		"parameterIdentify": "Cookie",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.RequestHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "从一个连接打开一个新页面，新页面的请求一般会加此信息，标名是从哪里跳过来的，所有的页面的打开历史链就可被挖掘出来，有利于分析用户行为与CPS分成",
+		"parameterId": 8,
+		"parameterIdentify": "Referer",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.RequestHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "请求的数据类型：text/html;charset=gbk",
+		"parameterId": 9,
+		"parameterIdentify": "Content-Type",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.RequestHeader",
+		"type": "String"
+	}]
+}

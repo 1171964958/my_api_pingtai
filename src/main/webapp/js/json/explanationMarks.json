@@ -1,0 +1,33 @@
+{
+	"parameterizedFilePath":{
+		"title":"关于参数化文件的说明",
+		"content":"上传的参数化文件需为<span class=\"label label-primary\"> txt </span>格式。<br>第一行为参数化节点路径(路径名称大小写敏感，请与参数标识符保持一致),从第二列开始为参数化数据,<span style='color:red;'>默认数据分隔符为英文下逗号,你可以自行设定不同的分隔符。</span>"			
+	},
+	"mock-validate-path":{
+		"title":"Mock入参验证节点路径的填写说明",
+		"content":"根据入参报文的格式不同，该项需要填写不同的内容:<br><span class=\"label label-primary radius\"> JSON、XML: </span> 完整的入参节点路径,例如ROOT.INFO.USERNAME;<br><span class=\"label label-primary radius\"> URL: </span> 留空;<br><span class=\"label label-primary radius\"> 不限格式: </span> 例如Socket报文，可使用关联规则来获取。<br><span style=\"color:red;\">对于URL参数和请求头，此处可忽略。</span>"
+	},
+	"settingMailStyle":{
+		"title":"自定义推送邮件的模板",
+		"content":"你可以自定义设定定时任务和探测任务的推送的邮件模板，模板类型为Html，同时可以在模板中插入相关测试结果变量。"
+	},
+	"webStepConfig":{
+		"title":"测试步骤配置",
+		"html":true,
+		"content":"explanation-mark-webstep-config",
+		"width":915,
+		"height":500
+	},
+	"webTestConfig":{
+		"title":"Web自动化运行时配置说明",
+		"content":"1、如果你的浏览器driver文件路径没有放置到环境变量下，请在此配置，<span class=\"label label-danger radius\"> 请填写全路径,注意填写的是自动化执行客户端所在机器上的driver路径 . </span><br>2、如何你的浏览器不是安装在默认路径或者安装的是绿色版，请指定各浏览器的执行bin文件的绝对路径（其他同上）。"
+	},
+	"webCustomVariableSetting":{
+		"title":"Web自动化自定义变量说明",
+		"content":"在测试用例、测试用例集、用例与用例集的关联对象中可以配置自定义的变量，变量以key-value形式保存（<span style=\"color:red;\">其中value可以使用全局变量</span>），自定义的变量可以在下属的测试步骤中使用：<br><span class=\"label label-danger radius\">优先级 </span>： <span class=\"label label-primary radius\">用例集自定义变量 </span> &gt; <span class=\"label label-primary radius\">用例与用例集关联对象自定义变量</span> &gt; <span class=\"label label-primary radius\">用例自定义变量</span>"	
+	},
+	"webSuiteCaseSetting":{
+		"title":"测试集用例自定义 配置说明",
+		"content":"<span class=\"label label-danger radius\">执行顺序：</span>默认按照设定的数字大小来排序，数字越小的先执行，越大的后执行。<br><span class=\"label label-danger radius\">分组名：</span>在进行分布式执行时，会将组名相同的用例分配到同一个远程执行机执行。<br><span class=\"label label-danger radius\">跳过标记：</span>方便在不需要执行某个用例时排除而不是删除掉。"
+	}
+}

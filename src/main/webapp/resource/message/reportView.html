@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>接口自动化测试报告</title>
+    <link rel="stylesheet" href="../../libs/bootstrap/css/bootstrap.min.css"/>
+    <style>
+        body{
+            padding:8px;
+            margin-top: 20px;
+            background-color: #F5F5F5;
+        }
+        hr{
+            border-color:#122b40;
+        }
+        .row > .col-sm-6 > span:first-child{
+            background-color: #F3F3F3;
+            margin-right: 15px;
+        }
+        .table{
+            margin-bottom: 30px;
+        }
+        th {
+        	white-space:nowrap;
+        }
+        .view-details{
+            padding: 20px;
+            margin: 30px;
+            border: 1px solid #aaaaaa;
+            height: 640px;
+        }
+
+        #view-html{
+            display: none;
+        }
+
+        #successNum {
+            color:green;
+        }
+
+        #stopNum {
+            color:#aaaaaa;
+        }
+
+        #failNum {
+           color:red;
+        }
+        .status {
+        	display:table-cell; vertical-align:middle;
+        }
+        
+        .col-sm-6 > span {
+        	font-size:16px;
+        }
+        
+        .atp-show {display: table-row;}
+        .count-tips {
+        	font-size: 14px;
+        	font-family: "SimHei";
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">接口自动化测试报告</h3>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body text-left">
+                <div class="row">
+                    <div class="col-sm-6"><span>测试场景数:</span>&nbsp;&nbsp;<span id="sceneNum"></span></div>
+                    <div class="col-sm-6"><span>执&nbsp;行&nbsp;日&nbsp;期:</span>&nbsp;&nbsp;<span id="testDate"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6"><span>执行成功数:</span>&nbsp;&nbsp;<span id="successNum"></span></div>
+                    <div class="col-sm-6"><span>异常中断数:</span>&nbsp;&nbsp;<span id="stopNum"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6"><span>执行失败数:</span>&nbsp;&nbsp;<span id="failNum"></span></div>
+                    <div class="col-sm-6"><span>测试成功率:</span>&nbsp;&nbsp;<span id="successRate"></span>%</div>
+                </div>
+                <div class="row" style="margin-top: 16px;">
+                	<div class="col-sm-2 col-sm-offset-6">                   	
+						<select class="form-control select-view-mark" id="business-system-views">
+						  <option value="all" selected>全部系统</option>
+						</select> 
+                    </div>
+                    <div class="col-sm-2">                   	
+						<select class="form-control select-view-mark" id="protocol-views">
+						  <option value="all" selected>全部协议</option>
+						  <option value="HTTP">HTTP</option>
+						  <option value="HTTPS">HTTPS</option>
+						  <option value="WebService">WebService</option>
+						  <option value="Socket">Socket</option>
+						  <option value="FIXED">FIXED</option>
+						</select> 
+                    </div>
+                    <div class="col-sm-2">
+                    	<select class="form-control select-view-mark" id="status-views">
+						  <option value="all" selected>全部状态</option>
+						  <option value="0">成功</option>
+						  <option value="1">失败</option>
+						  <option value="2">异常</option>
+						</select>
+                    </div>
+                </div>
+                <span class="count-tips"></span>               
+                <hr/>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>接口</th>
+                        <th>协议</th>
+                        <th>格式</th>
+                        <th>报文</th>
+                        <th>场景</th>
+                        <th>测试环境</th>
+                        <th>                       	 
+							状态                     
+                        </th>
+                        <th>耗时(ms)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-footer">
+                	接口自动化测试平台@2017-2018 Created by Dcits
+            </div>
+        </div>
+    </div>
+    <div id="view-html">
+        <div class="view-details">
+            <div class="row">
+               <div class="col-sm-3"><strong>请求地址:</strong></div>
+                <div class="col-sm-9"></div>
+            </div>
+            <br>
+             <div class="row">
+              	<div class="col-sm-3"><strong>测试环境:</strong></div>
+                <div class="col-sm-9"></div>
+            </div>
+            <br>
+            <div class="row">
+               <div class="col-sm-3"><strong>请求返回码:</strong></div>
+                <div class="col-sm-9"></div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-3"><strong>入参报文:</strong></div>
+                <div class="col-sm-9"><textarea class="form-control" cols="30" rows="8"></textarea></div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-3"><strong>出参报文:</strong></div>
+                <div class="col-sm-9"><textarea name="" class="form-control" cols="30" rows="8"></textarea></div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-3"><strong>备注:</strong></div>
+                <div class="col-sm-9"> <textarea name="" class="form-control" cols="30" rows="4"></textarea></div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="../../libs/jquery/1.9.1/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.spin.merge.js"></script>
+<script type="text/javascript" src="../../libs/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/dcits.js"></script>
+</body>
+</html>

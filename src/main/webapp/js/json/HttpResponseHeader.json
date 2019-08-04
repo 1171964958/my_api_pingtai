@@ -1,0 +1,76 @@
+{
+	"returnCode": 0,
+	"error": "",
+	"rootPid": 1,
+	"data": [{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "响应头",
+		"parameterId": 1,
+		"parameterIdentify": "ResponseHeader",
+		"parameterName": "",
+		"parentId": 0,
+		"path": "TopRoot",
+		"type": "Map"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "响应的数据类型：text/html;charset=gbk",
+		"parameterId": 2,
+		"parameterIdentify": "Content-Type",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.ResponseHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "响应的数据体大小",
+		"parameterId": 3,
+		"parameterIdentify": "Content-Length",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.ResponseHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "如果为文本、HTML信息，则使用的编码方式",
+		"parameterId": 4,
+		"parameterIdentify": "Content-Encoding",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.ResponseHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "当前服务器日期",
+		"parameterId": 5,
+		"parameterIdentify": "Date",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.ResponseHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "服务器名",
+		"parameterId": 6,
+		"parameterIdentify": "Server",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.ResponseHeader",
+		"type": "String"
+	},{
+		"attributes": null,
+		"defaultValue": "",
+		"mark": "第一次访问或服务设置COOKIE时，响应头里会有此信息， 如,BAIDUID=49415814CDBBB4CE65EC50EE4BB65E9A:FG=1; expires=Wed, 07-Nov-42 07:03:34 GMT; path=/; domain=.baidu.com",
+		"parameterId": 7,
+		"parameterIdentify": "Set-Cookie",
+		"parameterName": "",
+		"parentId": 1,
+		"path": "TopRoot.ResponseHeader",
+		"type": "String"
+	}]
+}

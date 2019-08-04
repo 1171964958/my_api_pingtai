@@ -1,0 +1,15 @@
+<!-- 动态菜单 -->
+<script id="menu-template" type="text/x-handlebars-template">
+{{#each this}}
+<dl id="{{id}}">
+    <dt><i class="Hui-iconfont {{ icon }}"></i> {{name}}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+    <dd>
+        <ul>
+        	{{#each childs}}
+            	<li><a _href="{{_href}}" data-title="{{data-title}}" href="javascript:void(0)">{{child_name}}</a></li>
+            {{/each}}
+        </ul>
+    </dd>
+</dl>
+{{/each}}
+</script>

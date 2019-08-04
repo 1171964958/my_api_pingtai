@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="/favicon.ico" >
+<LINK rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../libs/html5.js"></script>
+<script type="text/javascript" src="../../libs/respond.min.js"></script>
+<script type="text/javascript" src="../../libs/PIE_IE678.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../../libs/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../../libs/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="../../libs/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="../../libs/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="../../css/dcits.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>全局配置</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统管理 <span class="c-gray en">&gt;</span> 全局配置 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<article class="page-container">
+	<form method="post" class="form form-horizontal" id="form-setting-edit">	
+		<div id="tab-system" class="HuiTab">
+			<div class="tabBar cl"><span>网站设置</span><span>邮件设置</span><span>接口自动化设置</span><span>WEB自动化设置</span></div>
+			<!-- START -->
+			<div class="tabCon">			
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">首页地址：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="home" class="input-text radius" name="home" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">网站名称：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="siteName" class="input-text radius" name="siteName" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">版权信息：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="copyright" class="input-text radius" name="copyright" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">网站公告：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<textarea class="textarea radius" id="notice" name="notice"></textarea>
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">版本号：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="version" class="input-text radius" name="version" readonly="readonly" autocomplete="off">
+					</div>
+				</div>							
+				
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">日志开关：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box radius">
+						  <select class="select" size="1" id="logSwitch" name="logSwitch">
+						    <option value="0">开启</option>
+						    <option value="1">关闭</option>
+						  </select>
+						</span>
+					</div>
+				</div>	
+				
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">日志记录白名单：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="logRecordWhitelist" class="input-text radius" name="logRecordWhitelist" autocomplete="off">
+					</div>
+				</div>
+				
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">日志记录黑名单：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="logRecordBlacklist" class="input-text radius" name="logRecordBlacklist" autocomplete="off">
+					</div>
+				</div>
+				
+			</div>
+			<!-- END -->
+			
+			<!-- STRAT -->
+			<div class="tabCon">
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">开启邮件推送：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box radius">
+						  <select class="select" size="1" id="sendReportMail" name="sendReportMail">
+						    <option value="0">开启</option>
+						    <option value="1">关闭</option>
+						  </select>
+						</span>
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">启用SSL连接：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<span class="select-box radius">
+						  <select class="select" size="1" id="mailSSL" name="mailSSL">
+						    <option value="0">启用</option>
+						    <option value="1" selected>不启用</option>
+						  </select>
+						</span>
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">SMTP邮件服务器地址：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="mailHost" class="input-text radius" name="mailHost" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">SMTP邮件服务器端口：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="mailPort" class="input-text radius" name="mailPort" autocomplete="off">
+					</div>
+				</div>				
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">登录用户名：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="mailUsername" class="input-text radius" name="mailUsername" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">登录密码：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="password" id="mailPassword" class="input-text radius" name="mailPassword" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">发件人地址：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="mailSendAddress" class="input-text radius" name="mailSendAddress" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">自定义显示名称：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="mailPersonalName" class="input-text radius" name="mailPersonalName" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">默认收件人列表(逗号分隔)：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="mailReceiveAddress" class="input-text radius" name="mailReceiveAddress" autocomplete="off">
+					</div>
+				</div>			
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">默认抄送人列表(逗号分隔)：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="mailCopyAddress" class="input-text radius" name="mailCopyAddress" autocomplete="off">
+					</div>
+				</div>
+				<input type="hidden" id="messageMailStyle" class="input-text radius" name="messageMailStyle">	
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">推送邮件格式设置：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="button" class="btn btn-success radius setting-mail-style size-S" value="接口-探测任务" style-type="probe"/>&nbsp;
+						<input type="button" class="btn btn-success radius setting-mail-style size-S" value="接口-定时任务" style-type="time"/>&nbsp;
+						<a mark-name="settingMailStyle" class="btn btn-default radius explanation-mark"><i class="Hui-iconfont">&#xe6cd;</i></a>
+					</div>
+				</div>
+			</div>
+			<!-- END -->
+			
+			<!-- STRAT -->
+			<div class="tabCon">
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">XML默认头编码设置：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="messageEncoding" class="input-text radius" name="messageEncoding" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">测试报告小标题：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="messageReportTitle" class="input-text radius" name="messageReportTitle" autocomplete="off">
+					</div>
+				</div>						
+			</div>
+			<!-- END -->
+			
+			<!-- STRAT -->
+			<div class="tabCon">
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">工作目录路径：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="webscriptWorkPlace" class="input-text radius" name="webscriptWorkPlace" autocomplete="off">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">模块目录路径：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="webscriptModulePath" class="input-text radius" name="webscriptModulePath" autocomplete="off">
+					</div>
+				</div>	
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">执行机IP：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" id="webscriptExecutorHost" class="input-text radius" name="webscriptExecutorHost" autocomplete="off">
+					</div>
+				</div>		
+			</div>
+			<!-- END -->
+				
+			<div class="row cl">
+					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+						<input class="btn btn-primary radius save-setting" type="button" onclick="javascript:;" value="&nbsp;&nbsp;更新设置&nbsp;&nbsp;">						
+					</div>
+				</div>		
+		</div>
+	</form>
+</article>
+<script type="text/javascript" src="../../libs/jquery/1.9.1/jquery.js"></script>
+<script type="text/javascript" src="../../libs/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="../../libs/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="../../libs/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="../../js/jquery.spin.merge.js"></script>
+<script type="text/javascript" src="../../js/dcits.js"></script>
+</body>
+</html>
