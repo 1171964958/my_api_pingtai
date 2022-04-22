@@ -7,7 +7,7 @@
   <name>MasterYi Interface Automated Test Platform</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <struts.version>2.3.15.3</struts.version>
+    <struts.version>2.5.30</struts.version>
     <hibernate.version>4.2.4.Final</hibernate.version>
     <spring.version>4.0.0.RELEASE</spring.version>
     <axis2.version>1.6.4</axis2.version>
